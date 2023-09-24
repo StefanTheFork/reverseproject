@@ -20,6 +20,8 @@ please say the logo is cool because i spent 20 minutes fiddling,riddling,diddlin
 also its like a day after ive published v3 but whatever
 NEW LOGO. PUT IT IN YOUR SRC AND ENJOY (will be in v4 dw)
 
+                                                                    
+```                                                                    
                                                                     ██████████
                                                                    ░███░░░░███
  ████████   ██████  █████ █████  ██████  ████████   █████   ██████ ░░░    ███ 
@@ -28,3 +30,4 @@ NEW LOGO. PUT IT IN YOUR SRC AND ENJOY (will be in v4 dw)
  ░███     ░███░░░   ░░███ ███  ░███░░░   ░███      ░░░░███░███░░░      ███    
  █████    ░░██████   ░░█████   ░░██████  █████     ██████ ░░██████    ███     
 ░░░░░      ░░░░░░     ░░░░░     ░░░░░░  ░░░░░     ░░░░░░   ░░░░░░    ░░░      
+```
