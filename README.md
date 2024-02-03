@@ -1,7 +1,6 @@
 # Welcome to reverse7 v4, carrotcake!
 
-## ok, but whats new
-# well,
+# heres the changelog
 
 ![image](https://github.com/StefanTheFork/reverse7/assets/124001257/5c115eae-478e-49e5-a4bd-a7f353a01160)
 
