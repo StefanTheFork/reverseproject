@@ -12,4 +12,4 @@ may be a small release, but whatever.
 
 made by yours truly, stefan aka bkgrnd aka stefanthefork
 
-
+if you find any bugs, feel free to contact me on the coders cove discord (by pinging me)
