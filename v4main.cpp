@@ -423,7 +423,7 @@ int main(void) // shell/kernel/ui/TUI/everythingthatisntafunctionthatispredefine
         {
             cout << "\n";
             cout << "--Changelog--\n";
-            cout << "xx/xx/24 reverse7 v4 ------------- \n";
+            cout << "reverse v4 \"carrotcake\" FEBRUARY 3RD 2024 \n";
             cout << "1. removed makedir, big boy logo and useless info thingy\n";
             cout << "2. added a way to see your password and username without opening your .cfg file\n";
             cout << "3. added colours as compensation for the removal of big logo and makedir\n";
@@ -439,6 +439,8 @@ int main(void) // shell/kernel/ui/TUI/everythingthatisntafunctionthatispredefine
             cout << "9. added cache command, that works with the log command to contain the inputted commands" << endl;
             cout << "10. added pass function, that is meant as a placeholder command, for your own mods " << endl;
             cout << "11. removed features thing" << endl;
+            cout << "12. changed the release text from \"DAY/MONTH/YEAR\" to \"MONTH DAY YEAR\" "<< endl;
+            cout << "12.1. you can see what i mean on top of the changelog" << endl;
             cout << "---------------------\n";
             cout << "\n";
         }
