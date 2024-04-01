@@ -17,11 +17,11 @@ def kill_filesystem():
     print("destroyed successfully!")
 
 def clear_screen():
-    # Clear screen command based on OS
-    if os.name == 'posix':  # Unix/Linux/MacOS
+    # scans if you got unix, funni finnish man os or bill gates operating system
+    if os.name == 'posix':
         os.system('clear')
-    elif os.name == 'nt':  # Windows
+    elif os.name == 'nt':
         os.system('cls')
     else:
-        # If the OS is not recognized, print a newline
+        # if it cant decide if youre running one of those it just goes batshit and prints a new line 100 times i think
         print('\n' * 100)
