@@ -15,3 +15,13 @@ def kill_filesystem():
         print(f"Removed folder: {folder}")
 
     print("destroyed successfully!")
+
+def clear_screen():
+    # Clear screen command based on OS
+    if os.name == 'posix':  # Unix/Linux/MacOS
+        os.system('clear')
+    elif os.name == 'nt':  # Windows
+        os.system('cls')
+    else:
+        # If the OS is not recognized, print a newline
+        print('\n' * 100)
