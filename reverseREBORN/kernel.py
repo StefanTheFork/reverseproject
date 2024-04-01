@@ -1,7 +1,12 @@
 import os
 
+def onboot():
+    print("hello world")
+    #example onboot entry. put kernel.onboot() in your shell file as a standalone line and you can execute stuff like a logo or clock thing.
+
 def setup_filesystem():
-    folders = ['user', 'backups', 'updates', 'useless']
+    #creates beautiful file system
+    folders = ['user', 'backups', 'useless']
     for folder in folders:
         os.makedirs(folder, exist_ok=True)
         print(f"Created folder: {folder}")
@@ -9,7 +14,8 @@ def setup_filesystem():
     print("file system is ready!")
 
 def kill_filesystem():
-    folders = ['user', 'backups', 'updates', 'useless']
+    #sudo rm -rf / --no-preserve-root, but doesnt delete kernel, shell or package manager
+    folders = ['user', 'backups', 'useless']
     for folder in folders:
         os.rmdir(folder)
         print(f"Removed folder: {folder}")
