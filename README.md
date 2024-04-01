@@ -6,10 +6,8 @@ we went from uhhhhhh GlassOS, to reverse7 to reverse. (unofficial) to reverse re
 the reason for the reborn is............... uh like its becoming a kernel. forget the everythinginonefile mindset. its all just.... kernel.py, packagemanager.py and shell.py.
 ## YES YOU HEARD THAT RIGHT, ITS BECOMING A KERNEL.
 WOOOOOOOOOOOOOOOOW
-### a basic one....
-oooooh
 ## on python.
-EWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+EWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
 ## pros:
 everything is easy to edit, update, fix
 
