@@ -8,8 +8,13 @@ the reason for the reborn is............... uh like its becoming a kernel. forge
 WOOOOOOOOOOOOOOOOW
 ### a basic one....
 oooooh
-### VERY BASIC
-ok
-### NO CLOCK BASIC
-oh
+## on python.
+EWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+## pros:
+everything is easy to edit, update, fix
+COOL SHELLS
+AMAZING RICING CAPABILITIES
+and much, much more.
 
+## cons:
+python :thumbsup:
