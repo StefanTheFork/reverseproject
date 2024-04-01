@@ -12,8 +12,11 @@ oooooh
 EWWWWWWWWWWWWWWWWWWWWWWWWWWWW
 ## pros:
 everything is easy to edit, update, fix
+
 COOL SHELLS
+
 AMAZING RICING CAPABILITIES
+
 and much, much more.
 
 ## cons:
