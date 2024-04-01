@@ -6,7 +6,7 @@ def setup_filesystem():
         os.makedirs(folder, exist_ok=True)
         print(f"Created folder: {folder}")
 
-    print("file system is ready")
+    print("file system is ready!")
 
 def kill_filesystem():
     folders = ['user', 'backups', 'updates', 'useless']
@@ -14,4 +14,4 @@ def kill_filesystem():
         os.rmdir(folder)
         print(f"Removed folder: {folder}")
 
-    print("destroyed successfully.")
+    print("destroyed successfully!")
