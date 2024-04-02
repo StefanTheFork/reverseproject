@@ -1,4 +1,5 @@
 import os
+import shutil
 from datetime import datetime
 time = datetime.now()
 
@@ -15,9 +16,19 @@ def setup_filesystem():
     folders = ['user', 'backups', 'useless']
     for folder in folders:
         os.makedirs(folder, exist_ok=True)
-        print(f"Created folder: {folder}")
+        print(f"maked {folder}")
 
     print("file system is ready!")
+
+def kill_filesystem():
+    # sudo rm -rf / --no-preserve-root, but doesnt delete kernel, shell or package manager
+    folders = ['user', 'backups', 'useless']
+    for folder in folders:
+        shutil.rmtree(folder)
+        print(f"got rid of {folder}")
+
+    print("destroyed successfully!")
+
 
 def clear_screen():
     # scans if you got unix/linux or windows
