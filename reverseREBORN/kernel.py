@@ -4,6 +4,9 @@ time = datetime.now()
 
 # basic kernel stuff
 
+password = ""
+username = ""
+
 def onboot():
     print("hello world")
     # example onboot entry. put kernel.onboot() in your shell file as a standalone line and you can execute stuff like a logo or clock thing.
