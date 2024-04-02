@@ -4,8 +4,6 @@ time = datetime.now()
 
 # basic kernel stuff
 
-password = ""
-username = ""
 dirname = ""
 
 def onboot():
