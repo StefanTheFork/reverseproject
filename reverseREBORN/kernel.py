@@ -19,15 +19,6 @@ def setup_filesystem():
 
     print("file system is ready!")
 
-def kill_filesystem():
-    # sudo rm -rf / --no-preserve-root, but doesnt delete kernel, shell or package manager
-    folders = ['user', 'backups', 'useless']
-    for folder in folders:
-        os.rmdir(folder)
-        print(f"Removed folder: {folder}")
-
-    print("destroyed successfully!")
-
 def clear_screen():
     # scans if you got unix/linux or windows
     if os.name == 'posix':
@@ -42,6 +33,4 @@ def clock():
     print(current_time)
 
 def createdir():
-    print("enter directory name")
-    dirname = input(" > ")
     os.makedirs(dirname)
