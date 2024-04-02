@@ -3,6 +3,15 @@ import shutil
 from datetime import datetime
 time = datetime.now()
 
+# scans if you got unix/linux or windows
+if os.name == 'posix':
+    clear = "clear"
+elif os.name == 'nt':
+    clear = "cls"
+else:
+    print('\n' * 100)
+
+
 # basic kernel stuff
 
 dirname = ""
@@ -32,13 +41,8 @@ def kill_filesystem():
 
 
 def clear_screen():
-    # scans if you got unix/linux or windows
-    if os.name == 'posix':
-        os.system('clear')
-    elif os.name == 'nt':
-        os.system('cls')
-    else:
-        print('\n' * 100)
+    # hmmmmmm i wonder what it does
+    os.system(clear)
 
 def clock():
     # GUESS WHAT! ITS A CLOCK!
