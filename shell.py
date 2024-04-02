@@ -20,7 +20,7 @@ while True:
 		kernel.clear_screen()
 
 	if line == "exit":
-		os.exit()
+		break
 
 
 
