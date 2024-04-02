@@ -8,7 +8,8 @@ time = datetime.now()
 dirname = ""
 
 def onboot():
-    print("hello world")
+    print("Started!")
+    print("Hello, World!")
     # example onboot entry. put kernel.onboot() in your shell file as a standalone line and you can execute stuff like a logo or clock thing.
 
 def setup_filesystem():
@@ -40,8 +41,10 @@ def clear_screen():
         print('\n' * 100)
 
 def clock():
+    # GUESS WHAT! ITS A CLOCK!
     current_time = now.strftime("%H:%M:%S")
     print(current_time)
 
 def createdir():
+    # can you guess what it does?
     os.makedirs(dirname)
