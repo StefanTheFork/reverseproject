@@ -5,4 +5,4 @@ delete everything that isnt manual.txt shell.py kernel.py and spm.py
 open terminal, and write python3 shell.py
 youll see that it has magically launched the shell
 write setup file-system and it will setup the filesystem :mindblown:
-and now you can update. thanks for coming to my ted talk :thumbsup:
+and now you can update using pls update. thanks for coming to my ted talk :thumbsup:
