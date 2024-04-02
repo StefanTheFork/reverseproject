@@ -1,11 +1,15 @@
 import os
+from datetime import datetime
+time = datetime.now()
+
+# basic kernel stuff
 
 def onboot():
     print("hello world")
-    #example onboot entry. put kernel.onboot() in your shell file as a standalone line and you can execute stuff like a logo or clock thing.
+    # example onboot entry. put kernel.onboot() in your shell file as a standalone line and you can execute stuff like a logo or clock thing.
 
 def setup_filesystem():
-    #creates beautiful file system
+    # creates beautiful file system
     folders = ['user', 'backups', 'useless']
     for folder in folders:
         os.makedirs(folder, exist_ok=True)
@@ -14,7 +18,7 @@ def setup_filesystem():
     print("file system is ready!")
 
 def kill_filesystem():
-    #sudo rm -rf / --no-preserve-root, but doesnt delete kernel, shell or package manager
+    # sudo rm -rf / --no-preserve-root, but doesnt delete kernel, shell or package manager
     folders = ['user', 'backups', 'useless']
     for folder in folders:
         os.rmdir(folder)
@@ -23,11 +27,14 @@ def kill_filesystem():
     print("destroyed successfully!")
 
 def clear_screen():
-    # scans if you got unix, funni finnish man os or bill gates operating system
+    # scans if you got unix/linux or windows
     if os.name == 'posix':
         os.system('clear')
     elif os.name == 'nt':
         os.system('cls')
     else:
-        # if it cant decide if youre running one of those it just goes batshit and prints a new line 100 times i think
         print('\n' * 100)
+
+def clock():
+    current_time = now.strftime("%H:%M:%S")
+    print(current_time)
