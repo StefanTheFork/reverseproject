@@ -6,6 +6,7 @@ time = datetime.now()
 
 password = ""
 username = ""
+dirname = ""
 
 def onboot():
     print("hello world")
@@ -41,3 +42,8 @@ def clear_screen():
 def clock():
     current_time = now.strftime("%H:%M:%S")
     print(current_time)
+
+def createdir():
+    print("enter directory name")
+    dirname = input(" > ")
+    os.makedirs(dirname)
