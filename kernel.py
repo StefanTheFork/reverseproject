@@ -31,7 +31,7 @@ def setup_filesystem():
     print("file system is ready!")
 
 def kill_filesystem():
-    # sudo rm -rf / --no-preserve-root, but doesnt delete kernel, shell or package manager
+    #removes user backups and useless folder, its for when you want to redo your file structure
     folders = ['user', 'backups', 'useless']
     for folder in folders:
         shutil.rmtree(folder)
@@ -50,6 +50,7 @@ def clock():
     print(current_time)
 
 def makefile(filename):
+    #DOES THIS MAKE A FILE? I HAVE NO IDEA!
     try:
         with open(filename, 'w') as f:
             print(f"Created file: {filename}")
@@ -57,6 +58,7 @@ def makefile(filename):
         print(f"Error creating file: {e}")
 
 def makedir(dirname):
+    # GUYS WHAT DOES THIS DO?
     try:
         os.makedirs(dirname)
         print(f"Created directory: {dirname}")
@@ -64,16 +66,28 @@ def makedir(dirname):
         print(f"Error creating directory: {e}")
 
 def delfile(filename):
+    # omg i am trying to find what this does
     try:
         os.remove(filename)
         print(f"Deleted file: {filename}")
     except Exception as e:
-        print(f"Error deleting file: {e}")
+        print(f"promblemo with getting rid of {filename}, error: {e}")
 
 def deldir(dirname):
+    # and this too.....
     try:
         shutil.rmtree(dirname)
-        print(f"Deleted directory: {dirname}")
+        print(f"got rid of {dirname}")
     except Exception as e:
-        print(f"Error deleting directory: {e}")
+        print(f"error with getting rid of {dirname}, error: {e}")
+
+def custom_ls():
+    try:
+        # it gets the parent directory name and path and then lists the files :thumbsup:
+        parent_dir = os.path.dirname(os.path.abspath(__file__))
+        files = os.listdir(parent_dir)
+        for file in files:
+            print(file)
+    except Exception as e:
+        print(f"we got a lil problemo with listing a file.. error: {e}")
 
