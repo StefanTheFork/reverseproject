@@ -49,6 +49,31 @@ def clock():
     current_time = now.strftime("%H:%M:%S")
     print(current_time)
 
-def createdir():
-    # can you guess what it does?
-    os.makedirs(dirname)
+def makefile(filename):
+    try:
+        with open(filename, 'w') as f:
+            print(f"Created file: {filename}")
+    except Exception as e:
+        print(f"Error creating file: {e}")
+
+def makedir(dirname):
+    try:
+        os.makedirs(dirname)
+        print(f"Created directory: {dirname}")
+    except Exception as e:
+        print(f"Error creating directory: {e}")
+
+def delfile(filename):
+    try:
+        os.remove(filename)
+        print(f"Deleted file: {filename}")
+    except Exception as e:
+        print(f"Error deleting file: {e}")
+
+def deldir(dirname):
+    try:
+        shutil.rmtree(dirname)
+        print(f"Deleted directory: {dirname}")
+    except Exception as e:
+        print(f"Error deleting directory: {e}")
+
