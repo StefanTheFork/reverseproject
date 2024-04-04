@@ -79,14 +79,3 @@ def deldir(dirname):
         print(f"got rid of {dirname}")
     except Exception as e:
         print(f"error with getting rid of {dirname}, error: {e}")
-
-def custom_ls():
-    try:
-        # it gets the parent directory name and path and then lists the files :thumbsup:
-        parent_dir = os.path.dirname(os.path.abspath(__file__))
-        files = os.listdir(parent_dir)
-        for file in files:
-            print(file)
-    except Exception as e:
-        print(f"we got a lil problemo with listing a file.. error: {e}")
-
