@@ -1,22 +1,23 @@
-# Stupid Package Manager v1.0
+# Stupid Package Manager v1.1.
+# changes: replaced all mentions of kernel with base and rephrased the backing up base thing
 import os
 import shutil
 
-def update_kernel():
+def update_base():
     print("cloning repository")
     os.system("git clone --depth 1 --single-branch --branch main https://github.com/StefanTheFork/reverseproject.git useless")
 
-def finalize_kernel_update():
-    if os.path.exists("kernel.py"):
-        shutil.move("kernel.py", os.path.join("backups", "kernel_backup.py"))
-        print("moved current kernel.py to backups folder")
+def finalize_base_update():
+    if os.path.exists("base.py"):
+        shutil.move("base.py", os.path.join("backups", "base_backup.py"))
+        print("backed up base.py...")
     else:
-        print("kernel.py not found in parent folder")
-    if os.path.exists(os.path.join("useless", "kernel.py")):
-        shutil.move(os.path.join("useless", "kernel.py"), "kernel.py")
-        print("moved updated kernel.py to parent folder..")
+        print("base.py not found in parent folder")
+    if os.path.exists(os.path.join("useless", "base.py")):
+        shutil.move(os.path.join("useless", "base.py"), "base.py")
+        print("moved updated base.py to parent folder..")
     else:
-        print("updated kernel.py not found in useless folder...")
+        print("updated base.py not found in useless folder...")
 
 def cleanup():
     print("cleaning up...")
