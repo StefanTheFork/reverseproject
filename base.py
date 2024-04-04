@@ -1,3 +1,4 @@
+# base v1, not full release, technically v0.8, changes: renamed the filesystem stuff to setup and remove userfolders, and clock is working.
 import os
 import shutil
 from datetime import datetime
@@ -16,12 +17,12 @@ else:
 
 dirname = ""
 
-def onboot():
+def onstart():
     print("Started!")
     print("Hello, World!")
     # example onboot entry. put base.onboot() in your shell file as a standalone line and you can execute stuff like a logo or clock thing.
 
-def setup_filesystem():
+def setup_userfolders():
     # creates beautiful file system
     folders = ['user', 'backups', 'useless']
     for folder in folders:
@@ -30,7 +31,7 @@ def setup_filesystem():
 
     print("file system is ready!")
 
-def kill_filesystem():
+def remove_userfolders():
     #removes user backups and useless folder, its for when you want to redo your file structure
     folders = ['user', 'backups', 'useless']
     for folder in folders:
