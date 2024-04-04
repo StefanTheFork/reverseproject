@@ -1,26 +1,30 @@
 # basic shell
 
-import kernel
+import base
 import spm
 import os
 
-while True:
-
-	line = input("> ")
+try:
+	while True:
+		line = input("> ")
 	
-	if line == "pls update":
-		spm.update_kernel()
-		spm.finalize_kernel_update()
-		spm.cleanup()
+		if line == "pls update":
+			spm.update_kernel()
+			spm.finalize_kernel_update()
+			spm.cleanup()
 
-	if line == "setup file-system":
-		kernel.setup_filesystem()
+		elif line == "setup file-system":
+			base.setup_filesystem()
     
-	if line == "clear":
-		kernel.clear_screen()
+		elif line == "clear":
+			base.clear_screen()
 
-	if line == "exit":
-		break
+		elif line == "exit":
+			break
+		
+		else:
+			print("invalid command")
 
-
-
+except KeyboardInterrupt:
+	print("\n")
+	os._exit(0)

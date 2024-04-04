@@ -46,7 +46,7 @@ def clear_screen():
 
 def clock():
     # GUESS WHAT! ITS A CLOCK!
-    current_time = now.strftime("%H:%M:%S")
+    current_time = time.strftime("%H:%M:%S")
     print(current_time)
 
 def makefile(filename):
