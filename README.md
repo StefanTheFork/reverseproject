@@ -3,11 +3,8 @@
 
 Yet again another rebrand of the reverse thing, wow so cool.
 we went from uhhhhhh GlassOS, to reverse7 to reverse. (unofficial) to reverse reborn. such cool naming.
-the reason for the reborn is............... uh like its a kernel now.... forget the everythinginonefile mindset. its all just.... kernel.py, spm.py and shell.py.
-## YES YOUR HEARD IT RIGHT, ITS A KERNEL NOW!.
-WOOOOOOOOOOOOOOOOW
-## on python.
-EWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+the reason for the reborn is............... uh like its a new thing now.... forget the everythinginonefile mindset. its all just.... base.py, spm.py and shell.py.
+## oh and its on python now....
 ## pros:
 everything is easy to edit, update, fix
 
