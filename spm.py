@@ -1,13 +1,12 @@
-# Stupid Package Manager v1.1.
-# changes: replaced all mentions of kernel with base and rephrased the backing up base thing
+# Stupid Package Manager Core v1.2.
+# changes: added a self update thing and merged update_base() and finalize_base_update() into update_base()
 import os
 import shutil
 
-def update_base():
+def spm_update_base():
     print("cloning repository")
     os.system("git clone --depth 1 --single-branch --branch main https://github.com/StefanTheFork/reverseproject.git useless")
-
-def finalize_base_update():
+    
     if os.path.exists("base.py"):
         shutil.move("base.py", os.path.join("backups", "base_backup.py"))
         print("backed up base.py...")
@@ -18,6 +17,31 @@ def finalize_base_update():
         print("moved updated base.py to parent folder..")
     else:
         print("updated base.py not found in useless folder...")
+
+def update_spm_core():
+    print("updating spm core.. this will take a moment, or two")
+    print("cloning repository")
+    os.system("git clone --depth 1 --single-branch --branch main https://github.com/StefanTheFork/reverseproject.git useless")
+
+    if os.path.exists("spm.py"):
+        shutil.move("spm.py", os.path.join("backups", "spm_backup.py"))
+        print("backed up current spm")
+    else:
+        print("spm not found in parent folder")
+    
+    if os.path.exists(os.path.join("useless", "spm.py")):
+        shutil.move(os.path.join("useless", "spm.py"), "spm.py")
+        print("moved updated spm to parent folder..")
+    else:
+        print("updated spm not found in useless folder...")
+
+    # LOOK AT THIS. AUTOMATIC CLEANUP! 
+    print("cleaning up...")
+    shutil.rmtree("useless")
+    print("deleted useless folder...")
+    os.makedirs("useless")
+    print("recreated useless folder...")
+    
 
 def cleanup():
     print("cleaning up...")
