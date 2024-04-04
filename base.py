@@ -4,7 +4,7 @@ import shutil
 from datetime import datetime
 time = datetime.now()
 
-# scans if you got unix/linux or windows
+# scans if you got unix/linux or windows and then assumes your clear command
 if os.name == 'posix':
     clear = "clear"
 elif os.name == 'nt':
