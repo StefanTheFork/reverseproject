@@ -12,14 +12,14 @@ else:
     print('\n' * 100)
 
 
-# basic kernel stuff
+# the base starts here
 
 dirname = ""
 
 def onboot():
     print("Started!")
     print("Hello, World!")
-    # example onboot entry. put kernel.onboot() in your shell file as a standalone line and you can execute stuff like a logo or clock thing.
+    # example onboot entry. put base.onboot() in your shell file as a standalone line and you can execute stuff like a logo or clock thing.
 
 def setup_filesystem():
     # creates beautiful file system
