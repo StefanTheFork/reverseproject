@@ -18,7 +18,7 @@ else:
 def onstart():
     print("Started!")
     print("Hello, World!")
-    # example onboot entry. put base.onboot() in your shell file as a standalone line and you can execute stuff like a logo or clock thing.
+    # example onstart entry. put base.onstart() in your shell file as a standalone line and you can execute stuff like a logo or clock thing.
 
 def setup_userfolders():
     # creates beautiful file system
