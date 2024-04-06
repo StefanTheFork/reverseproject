@@ -1,4 +1,4 @@
-# base v1, not full release, technically v0.8, changes: renamed the filesystem stuff to setup and remove userfolders, and clock is working, dirname variable is useless so it no longer exists.
+# base v1, not full release, technically v0.8.1, changes: onstart is now a clock thing...
 import os
 import shutil
 from datetime import datetime
@@ -14,8 +14,6 @@ else:
 
 
 # the base starts here
-
-
 
 def setup_userfolders():
     # creates beautiful file system
