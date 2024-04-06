@@ -15,10 +15,7 @@ else:
 
 # the base starts here
 
-def onstart():
-    print("Started!")
-    print("Hello, World!")
-    # example onstart entry. put base.onstart() in your shell file as a standalone line and you can execute stuff like a logo or clock thing.
+
 
 def setup_userfolders():
     # creates beautiful file system
@@ -79,3 +76,7 @@ def deldir(dirname):
         print(f"got rid of {dirname}")
     except Exception as e:
         print(f"error with getting rid of {dirname}, error: {e}")
+
+def onstart():
+    clock()
+    # example onstart entry with a clock. put base.onstart() in your shell file to execute this thing
