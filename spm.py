@@ -66,4 +66,4 @@ def spm_installpkg(package):
             print("yk, sometimes packages just dont exist, or you forgot the .py on the end...")
 
     except Exception as e:
-        print("sorry but it wasnt installed. error:",e)
+        print("sorry but it wasnt installed. error:",e) # 69. n i c e 
