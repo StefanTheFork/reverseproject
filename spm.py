@@ -1,5 +1,5 @@
-# Stupid Package Manager Core v1.2.
-# changes: added a self update thing and merged update_base() and finalize_base_update() into update_base()
+# Stupid Package Manager Core v1.3.
+# changes: install now exists
 import os
 import shutil
 
@@ -41,7 +41,17 @@ def update_spm_core():
     print("deleted useless folder...")
     os.makedirs("useless")
     print("recreated useless folder...")
+
+def spm_installpkg(package):
+    print("cloning repository")
+    os.system("git clone --depth 1 --single-branch --branch main https://github.com/StefanTheFork/reverseproject.git useless")
     
+    if os.path.exists(os.path.join("useless", "packages", package)):
+        shutil.move(os.path.join("useless", "packages", package), package)
+        print("moved your " + package + " into the thing")
+    else:
+        print("yk, sometimes packages just dont exist...")
+
 
 def cleanup():
     print("cleaning up...")
@@ -49,4 +59,3 @@ def cleanup():
     print("deleted useless folder...")
     os.makedirs("useless")
     print("recreated useless folder...")
-
