@@ -1,5 +1,5 @@
-# Stupid Package Manager Core v1.3.
-# changes: install now exists
+# Stupid Package Manager Core v1.3.1
+# changes: automatic cleanup wow
 import os
 import shutil
 
@@ -17,6 +17,12 @@ def spm_update_base():
         print("moved updated base.py to parent folder..")
     else:
         print("updated base.py not found in useless folder...")
+
+    # HOLY SH*T AUTOMATIC CLEANUP ON BASE UPDATE? YOURE KIDDING ME!
+    print("cleaning up...")
+    shutil.rmtree("useless")
+    os.makedirs("useless")
+    print("cleaned up...")
 
 def update_spm_core():
     print("updating spm core.. this will take a moment, or two")
@@ -38,24 +44,26 @@ def update_spm_core():
     # LOOK AT THIS. AUTOMATIC CLEANUP! 
     print("cleaning up...")
     shutil.rmtree("useless")
-    print("deleted useless folder...")
     os.makedirs("useless")
-    print("recreated useless folder...")
+    print("cleaned up...")
 
 def spm_installpkg(package):
-    print("cloning repository")
-    os.system("git clone --depth 1 --single-branch --branch main https://github.com/StefanTheFork/reverseproject.git useless")
+    try:
+        print("cloning repository")
+        os.system("git clone --depth 1 --single-branch --branch main https://github.com/StefanTheFork/reverseproject.git useless")
     
-    if os.path.exists(os.path.join("useless", "packages", package)):
-        shutil.move(os.path.join("useless", "packages", package), package)
-        print("moved your " + package + " into the thing")
-    else:
-        print("yk, sometimes packages just dont exist...")
+        if os.path.exists(os.path.join("useless", "packages", package)):
+            shutil.move(os.path.join("useless", "packages", package), package)
+            print("moved your " + package + " into the thing")
+            print("cleaning up...")
+            shutil.rmtree("useless")
+            os.makedirs("useless")
+            print("cleaned up...")
+            print("installation was succsessful!")
 
 
-def cleanup():
-    print("cleaning up...")
-    shutil.rmtree("useless")
-    print("deleted useless folder...")
-    os.makedirs("useless")
-    print("recreated useless folder...")
+        else:
+            print("yk, sometimes packages just dont exist, or you forgot the .py on the end...")
+
+    except Exception as e:
+        print("sorry but it wasnt installed. error:",e)
