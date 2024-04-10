@@ -1,8 +1,78 @@
 today you will learn how to set this thing up.
 git clone <this repo>
 go to the reverseproject folder
-delete everything that isnt manual.txt shell.py base.py and spm.py
-open terminal, and write python3 shell.py
-youll see that it has magically launched the shell
-write setup file-system and it will setup the filesystem :mindblown:
-and now you can update using pls update. thanks for coming to my ted talk :thumbsup:
+delete everything that isnt manual.txt base.py and spm.py
+make a shell.
+python3 shell.py
+and youll see that it has magically launched the shell.
+ thanks for coming to my ted talk :thumbsup:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+69. n i c e
+
+
+
+
+
+
+
+
+
