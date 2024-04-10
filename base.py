@@ -66,7 +66,7 @@ def delfile(filename):
         print(f"Deleted file: {filename}")
     except Exception as e:
         print(f"promblemo with getting rid of {filename}, error: {e}")
-
+# 69. n i c e
 def deldir(dirname):
     # and this too.....
     try:
