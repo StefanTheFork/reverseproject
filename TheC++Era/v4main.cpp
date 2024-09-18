@@ -66,7 +66,7 @@ void createtextfile() {
     else {
         std::cout << RED << "unable to create the file" << RESET << std::endl;
     }
-}
+} // heheheheheheehehehehehheheheheheheheheehheheheehehehehehehe funni
 
 void readtextfile() {
     std::string line;
@@ -417,7 +417,7 @@ int main(void) // shell/kernel/ui/TUI/everythingthatisntafunctionthatispredefine
             cout << BLUE << "if you forget your password, type whoami to get your username and password.\n";
             cout << RESET << "---------------------------------------------------------";
             cout << "\n";
-        }
+        } // got a giggle out of me fr
 
         if (command == "changelog" || command == "changelkog")
         {
