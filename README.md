@@ -18,6 +18,6 @@ and much, much more.
 
 ## cons:
 python :thumbsup:
-
+IF YOU FUCKING COPY ANY OF THIS AND SAY ITS YOUR OWN CODE I HOPE YOUR FAMILY DIES IN A FIRE. I WILL TAKE LEGAL ACTION
 ________________________________________
-last edited: 4th april 2024 10:36PM EEST
+last edited: 5th june 2025
