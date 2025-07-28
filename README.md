@@ -13,7 +13,7 @@ it adds a new fallback shell and renames some stuff.
 <img width="992" height="629" alt="image" src="https://github.com/user-attachments/assets/1394f510-dd96-44df-a9b8-2faed1e0bf87" />
 
 oh btw, theres a new package....
-minifetch! its a port of penguinguy's miniOS sysfetch to reverse
+minifetch! its a port of penguinguy25's miniOS sysfetch to reverse
 <img width="992" height="629" alt="image" src="https://github.com/user-attachments/assets/c87a8afd-ad37-4ea5-a348-a4a16602e039" />
 (its not in the fallback shell by default, you have to install it manually and add it to the fallback shell manually.)
 
