@@ -13,7 +13,7 @@ else:
     print('\n' * 100)
 
 
-# the base starts here
+# this is all of the BASE commands currently avalible 
 
 def filesys(argument):
     if argument == "create":
@@ -66,6 +66,8 @@ def deldir(dirname):
         print(f"Removed {dirname}")
     except Exception as e:
         print(f"Error with removing directory {dirname}, error: {e}")     # 69 n i c e
+
+# fallback shell
 
 def fallbackshell():
     print("hey, you havent set up a shell!")
