@@ -2,7 +2,6 @@
 import os
 import shutil
 from datetime import datetime
-import minifetch
 time = datetime.now()
 
 # if your host os is unix, use clear, if windows use cls, if it cant find what you have it just prints 100 new lines
