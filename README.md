@@ -20,6 +20,8 @@ minifetch! its a port of penguinguy's miniOS sysfetch to reverse
 there are some problems, but the minifetch port will be fixed once i am done with upcoming updates and adding new shells n stuff
 
 
-coming up: Stupid Package Manager Core v2 a full rewrite to spm that works properly.
+# upcoming update: Stupid Package Manager Core v2.... a full rewrite to spm that works properly.
 
-I DO NOT GUARANTEE THAT SPM CORE v2 AND THE MINIFETCH PORT FIXES WILL COME SOON. 
+
+
+## I DO NOT GUARANTEE THAT SPM CORE v2 AND THE MINIFETCH PORT FIXES WILL COME SOON. 
