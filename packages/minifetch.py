@@ -1,4 +1,4 @@
-# made by penguin guy, ported to reverse by bkgrnd/STF
+# made by penguinguy25, ported to reverse by bkgrnd/STF
 from rich.console import Console
 from rich.panel import Panel
 from rich.columns import Columns
