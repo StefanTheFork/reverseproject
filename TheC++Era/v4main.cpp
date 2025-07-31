@@ -453,4 +453,4 @@ int main(void) // shell/kernel/ui/TUI/everythingthatisntafunctionthatispredefine
         }
     }
 }
-#if you are reading this, hello, im probably going to release RRv1f eventually - mach luv, bakagrand
+// if you are reading this, hello, im probably going to release RRv1f eventually - mach luv, bakagrand
