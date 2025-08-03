@@ -1,5 +1,5 @@
 # Stupid Package Manager v1.4
-# changes: slight rewrite 
+# changes: slight rewrite
 import os
 import shutil
 
