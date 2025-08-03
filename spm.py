@@ -5,20 +5,20 @@ import shutil
 
 def update_package():
     print("what do you want to update?")
-    print("1. update base.py")
-    print("2. update spm.py")
+    print("1. update base")
+    print("2. update spm")
 
     choice = input("enter 1 or 2: ").strip()
 
     if choice == "1":
         target_file = "base.py"
         backup_file = "base_backup.py"
-        print("updating base.py...")
+        print("updating base...")
 
     elif choice == "2":
         target_file = "spm.py"
         backup_file = "spm_backup.py"
-        print("updating spm.py...")
+        print("updating spm...")
 
     else:
         print("invalid choice.")
