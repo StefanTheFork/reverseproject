@@ -1,27 +1,26 @@
 # Welcome to the reverse project.
-![image](https://github.com/StefanTheFork/reverseproject/assets/124001257/4b8e8090-fe32-4c73-8cbc-6ac4ca967171)
+<img width="1357" height="769" alt="image" src="https://github.com/user-attachments/assets/d6da0318-f5a1-4184-9cfa-7178e828ab18" />
+
 
 Reverse has been my main passionproject since early 2023 (wow.) 
 this is a little operating system thingy inside your terminal!
 with reverse reborn, i released a simple package manager called SPM (stupid package manager)
 current "release" of reverse is reborn. it makes everything in seperate files, adds new features and is on python unlike reverse7, which was on c++
 
-# PLEASE CHECK THIS OUT! THESE ARE THE UPDATES!
+base v1 has been released!
+it renames pretty much everything, has native spm support and a new fallback ascii logo
+<img width="1357" height="769" alt="image" src="https://github.com/user-attachments/assets/368cd2d1-5c3f-4c4b-8f33-dd0550cdb2f7" />
 
-base v0.9.0 has been released!
-it adds a new fallback shell and renames some stuff.
-<img width="992" height="629" alt="image" src="https://github.com/user-attachments/assets/1394f510-dd96-44df-a9b8-2faed1e0bf87" />
+ALSOOOOOOOOOO THE NEW SPM REWRITE IS HERE....... but not really(?)
+theres a "menu" for installing packages... but not really.
+<img width="1357" height="769" alt="image" src="https://github.com/user-attachments/assets/b1865607-ca08-4840-b59e-558c48fd2dc4" />
 
-oh btw, theres a new package....
-minifetch! its a port of penguinguy25's miniOS sysfetch to reverse
-<img width="992" height="629" alt="image" src="https://github.com/user-attachments/assets/c87a8afd-ad37-4ea5-a348-a4a16602e039" />
-(its not in the fallback shell by default, you have to install it manually and add it to the fallback shell manually.)
+theres also a WORKING menu for updating spm and the core... so thats cooler
+<img width="1357" height="769" alt="image" src="https://github.com/user-attachments/assets/dd163150-7df2-4593-916f-95219b0ff956" />
 
-there are some problems, but the minifetch port will be fixed once i am done with upcoming updates and adding new shells n stuff
-
-
-# upcoming update: Stupid Package Manager Core v2.... a full rewrite to spm that works properly.
-
+now, the reason why this isnt actually a full rewrite but rather a sloppily trhrown togheder feature half made by repurposed chatgpt slop and half reading what old spm was....... 
+is because the spm full rewrite will be a whole different package manager. yes reverse will have 2 package managers. no, spm will not be updated past this point.
+kthxbai
 
 
-## I DO NOT GUARANTEE THAT SPM CORE v2 AND THE MINIFETCH PORT FIXES WILL COME SOON. 
+aug 3rd 3:24 am 
