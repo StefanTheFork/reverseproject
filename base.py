@@ -1,8 +1,10 @@
-# base v0.9.1, changes: base text editor and base text reading command and some other stuff i think
+# base v1, changes: renamed a shitload of stuff, fallback shell now has ascii art and uh native spm support wowza
 import os
 import shutil
 from datetime import datetime
+import spm
 time = datetime.now()
+
 
 # if your host os is unix, use clear, if windows use cls, if it cant find what you have it just prints 100 new lines
 if os.name == 'posix':
@@ -13,21 +15,6 @@ else:
     print('\n' * 100)
 
 # BASE commands
-
-def filesys(argument):
-    if argument == "create":
-        folders = ['user', 'backups', 'useless']
-        for folder in folders:
-            os.makedirs(folder, exist_ok=True)
-            print(f"maked {folder}")
-        print("file system is ready!")
-    elif argument == "decimate":
-        folders = ['user', 'backups', 'useless']
-        for folder in folders:
-            shutil.rmtree(folder)
-            print(f"got rid of {folder}")
-        print("destroyed successfully!")
-
 def clear_screen():
     os.system(clear)
 
@@ -35,28 +22,28 @@ def clock():
     current_time = time.strftime("%H:%M:%S")
     print(current_time)
 
-def makefile(filename):
+def mkfile(filename):
     try:
         with open(filename, 'w') as f:
             print(f"Created file: {filename}")
     except Exception as e:
         print(f"Error creating file: {e}")
 
-def makedir(dirname):
+def mkdir(dirname):
     try:
-        os.makedirs(dirname)
+        os.mkdirs(dirname)
         print(f"Created directory: {dirname}")
     except Exception as e:
         print(f"Error creating directory: {e}")
 
-def delfile(filename):
+def rmfile(filename):
     try:
         os.remove(filename)
         print(f"Deleted {filename}")
     except Exception as e:
         print(f"Error with deleting file {filename}, error: {e}")
 
-def deldir(dirname):
+def rmdir(dirname):
     try:
         shutil.rmtree(dirname)
         print(f"Removed {dirname}")
@@ -92,7 +79,7 @@ def editfile(filename):
         # Read new content
         while True:
             line = input()
-            if line.strip() in (':wq', 'EOF'):
+            if line.strip() in ("end"):
                 break
             lines.append(line)
 
@@ -107,8 +94,17 @@ def editfile(filename):
 # fallback shell
 
 def fallbackshell():
+    fallback = """
+   __      _ _ _                _    
+  / _|    | | | |              | |   
+ | |_ __ _| | | |__   __ _  ___| | __
+ |  _/ _` | | | '_ \ / _` |/ __| |/ /
+ | || (_| | | | |_) | (_| | (__|   < 
+ |_| \__,_|_|_|_.__/ \__,_|\___|_|\_\\
+"""
+    print(fallback)
     print("hey, you havent set up a shell!")
-    print("fear not my child. here is a fallback shell")
+    print("fear not my child. for i have.... a fallback shell")
 
     while True:
         command = input("~> ").strip()
@@ -119,43 +115,37 @@ def fallbackshell():
         func_name = parts[0]
         args = parts[1:]
 
-        if func_name == "filesys":
-            if len(args) != 1:
-                print("Usage: filesys <create|decimate>")
-            else:
-                filesys(args[0])
-
-        elif func_name == "clear":
+        if func_name in ("clr", "clear", "cls"):
             clear_screen()
 
         elif func_name == "clock":
             clock()
 
-        elif func_name == "makefile":
+        elif func_name == "mkfile":
             if len(args) != 1:
-                print("Usage: makefile <filename>")
+                print("Usage: mkfile <filename>")
             else:
-                makefile(args[0])
+                mkfile(args[0])
 
-        elif func_name == "makedir":
+        elif func_name == "mkdir":
             if len(args) != 1:
-                print("Usage: makedir <dirname>")
+                print("Usage: mkdir <dirname>")
             else:
-                makedir(args[0])
+                mkdir(args[0])
 
-        elif func_name == "delfile":
+        elif func_name == "rmfile":
             if len(args) != 1:
-                print("Usage: delfile <filename>")
+                print("Usage: rmfile <filename>")
             else:
-                delfile(args[0])
+                rmfile(args[0])
 
-        elif func_name == "deldir":
+        elif func_name == "rmdir":
             if len(args) != 1:
-                print("Usage: deldir <dirname>")
+                print("Usage: rmdir <dirname>")
             else:
-                deldir(args[0])
+                rmdir(args[0])
 
-        elif func_name == "read":
+        elif func_name == "cat":
             if not args:
                 print("Usage: read <file>")
             else:
@@ -166,5 +156,12 @@ def fallbackshell():
                 print("Usage: edit <filename>")
             else:
                 editfile(args[0])
+
+        elif command == "spm install":
+            spm.install()
+
+        elif command == "spm update":
+            spm.update_package()
+
 clear_screen()
 fallbackshell()
