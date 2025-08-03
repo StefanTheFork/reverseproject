@@ -1,69 +1,72 @@
-# Stupid Package Manager Core v1.3.1
-# changes: automatic cleanup wow
+# Stupid Package Manager v1.4
+# changes: slight rewrite 
 import os
 import shutil
 
-def spm_update_base():
-    print("cloning repository")
-    os.system("git clone --depth 1 --single-branch --branch main https://github.com/StefanTheFork/reverseproject.git useless")
-    
-    if os.path.exists("base.py"):
-        shutil.move("base.py", os.path.join("backups", "base_backup.py"))
-        print("backed up base.py...")
-    else:
-        print("base.py not found in parent folder")
-    if os.path.exists(os.path.join("useless", "base.py")):
-        shutil.move(os.path.join("useless", "base.py"), "base.py")
-        print("moved updated base.py to parent folder..")
-    else:
-        print("updated base.py not found in useless folder...")
+def update_package():
+    print("what do you want to update?")
+    print("1. update base.py")
+    print("2. update spm.py")
 
-    # HOLY SH*T AUTOMATIC CLEANUP ON BASE UPDATE? YOURE KIDDING ME!
-    print("cleaning up...")
-    shutil.rmtree("useless")
-    os.makedirs("useless")
-    print("cleaned up...")
+    choice = input("enter 1 or 2: ").strip()
 
-def update_spm_core():
-    print("updating spm core.. this will take a moment, or two")
-    print("cloning repository")
+    if choice == "1":
+        target_file = "base.py"
+        backup_file = "base_backup.py"
+        print("updating base.py...")
+
+    elif choice == "2":
+        target_file = "spm.py"
+        backup_file = "spm_backup.py"
+        print("updating spm.py...")
+
+    else:
+        print("invalid choice.")
+        return
+
+    print("cloning repository...")
     os.system("git clone --depth 1 --single-branch --branch main https://github.com/StefanTheFork/reverseproject.git useless")
 
-    if os.path.exists("spm.py"):
-        shutil.move("spm.py", os.path.join("backups", "spm_backup.py"))
-        print("backed up current spm")
+    if os.path.exists(target_file):
+        shutil.move(target_file, os.path.join("backups", backup_file))
+        print(f"backed up {target_file} as {backup_file}.")
     else:
-        print("spm not found in parent folder")
-    
-    if os.path.exists(os.path.join("useless", "spm.py")):
-        shutil.move(os.path.join("useless", "spm.py"), "spm.py")
-        print("moved updated spm to parent folder..")
-    else:
-        print("updated spm not found in useless folder...")
+        print(f"{target_file} not found in parent folder.")
 
-    # LOOK AT THIS. AUTOMATIC CLEANUP! 
+    updated_path = os.path.join("useless", target_file)
+    if os.path.exists(updated_path):
+        shutil.move(updated_path, target_file)
+        print(f"moved updated {target_file} to parent folder.")
+    else:
+        print(f"updated {target_file} not found in repository folder.")
+
     print("cleaning up...")
     shutil.rmtree("useless")
-    os.makedirs("useless")
-    print("cleaned up...")
+    os.makedirs("useless", exist_ok=True)
+    print("cleaned up.")
 
-def spm_installpkg(package):
+def install():
     try:
-        print("cloning repository")
+        package = input("enter pkg name ~> ").strip()
+
+        if not package:
+            print("hey i cant install        !")
+            return
+
+        if not package.endswith(".py"):
+            package += ".py"
+
+        print("cloning repo...")
         os.system("git clone --depth 1 --single-branch --branch main https://github.com/StefanTheFork/reverseproject.git useless")
-    
-        if os.path.exists(os.path.join("useless", "packages", package)):
-            shutil.move(os.path.join("useless", "packages", package), package)
-            print("moved your " + package + " into the thing")
+
+        pkg_path = os.path.join("useless", "packages", package)
+        if os.path.exists(pkg_path):
+            shutil.move(pkg_path, package)
+            print(f"moved '{package}' into current directory.")
             print("cleaning up...")
-            shutil.rmtree("useless")
-            os.makedirs("useless")
-            print("cleaned up...")
-            print("installation was succsessful!")
-
-
-        else:
-            print("yk, sometimes packages just dont exist, or you forgot the .py on the end...")
-
+            shutil.rmtree("useless") 
+            os.makedirs("useless", exist_ok=True)
+            print("cleaned up.")
+            print("great success")
     except Exception as e:
-        print("sorry but it wasnt installed. error:",e) # 69. n i c e 
+        print(f"hey uh there seems to be an error..... Error: {e}")
