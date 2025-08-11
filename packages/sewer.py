@@ -8,11 +8,11 @@ def sewerdo(args):
         if args[0] == "-i":
             os.makedirs("temp")
             if len(args) < 2:
-                print("please specify a package")
+                print("Please specify a package to install.")
                 return
             package = args[1]
             if package == "":
-                print("please specify a package")
+                print("there isnt a package to download.")
             else: 
                 try:
                     print("cloning repository")
@@ -38,19 +38,19 @@ def sewerdo(args):
             print("Cloning reverseproject repository")
             os.system("git clone --depth 1 --single-branch --branch main https://github.com/StefanTheFork/reverseproject.git temp")
 
-            # Backup sewer.py from packages folder
-            if os.path.exists("packages/sewer.py"):
-                shutil.move("packages/sewer.py", os.path.join("backups", "sewer_backup.py"))
-                print("Backed up packages/sewer.py")
+            # Backup sewer.py in root (if it exists)
+            if os.path.exists("sewer.py"):
+                shutil.move("sewer.py", os.path.join("backups", "sewer_backup.py"))
+                print("Backed up sewer.py from root")
             else:
-                print("sewer.py not found in packages folder")
+                print("sewer.py not found in root folder")
 
-            # Move new sewer.py from temp to packages folder
-            if os.path.exists(os.path.join("temp", "sewer.py")):
-                shutil.move(os.path.join("temp", "sewer.py"), "packages/sewer.py")
-                print("Moved new sewer.py to packages folder")
+            # Move new sewer.py from cloned packages folder to root
+            if os.path.exists(os.path.join("temp", "packages", "sewer.py")):
+                shutil.move(os.path.join("temp", "packages", "sewer.py"), "sewer.py")
+                print("Moved new sewer.py to root folder")
             else:
-                print("Updated sewer.py not found in temp folder")
+                print("Updated sewer.py not found in temp/packages folder")
 
 
         elif args[0] == "-ub":
