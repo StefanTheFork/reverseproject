@@ -1,4 +1,4 @@
-# Stupid Package Manager Core v1.3.1
+# sewer v1. very work in progress
 import os
 import shutil
 
