@@ -8,11 +8,11 @@ def sewerdo(args):
         if args[0] == "-i":
             os.makedirs("temp")
             if len(args) < 2:
-                print("Please specify a package to install.")
+                print("please specify a package")
                 return
             package = args[1]
             if package == "":
-                print("there isnt a package to download.")
+                print("please specify a package")
             else: 
                 try:
                     print("cloning repository")
