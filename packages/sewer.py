@@ -1,4 +1,4 @@
-# sewer v1
+# oh look, sewer v1 the new package manager wowsers.
 import os
 import shutil
 
