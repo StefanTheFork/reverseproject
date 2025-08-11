@@ -32,20 +32,18 @@ def sewerdo(args):
         
         elif args[0] == "-us":
             os.makedirs("temp", exist_ok=True)
-            os.makedirs("backups", exist_ok=True)
+            os.makedirs("temp2", exist_ok=True)
 
             print("Updating sewer... this will take a moment or two")
             print("Cloning reverseproject repository")
             os.system("git clone --depth 1 --single-branch --branch main https://github.com/StefanTheFork/reverseproject.git temp")
 
-            # Backup sewer.py in root (if it exists)
             if os.path.exists("sewer.py"):
-                shutil.move("sewer.py", os.path.join("backups", "sewer_backup.py"))
+                shutil.move("sewer.py", os.path.join("temp2", "sewer_backup.py"))
                 print("Backed up sewer.py from root")
             else:
                 print("sewer.py not found in root folder")
 
-            # Move new sewer.py from cloned packages folder to root
             if os.path.exists(os.path.join("temp", "packages", "sewer.py")):
                 shutil.move(os.path.join("temp", "packages", "sewer.py"), "sewer.py")
                 print("Moved new sewer.py to root folder")
@@ -82,14 +80,14 @@ def sewerdo(args):
         if os.path.exists("temp"):
             try:
                 shutil.rmtree("temp")
-                print("Cleaned up temp folder")
+                print("cleaned up temp folder")
             except Exception as cleanup_err:
                 print(f"Failed to remove temp folder: {cleanup_err}")
 
         if os.path.exists("temp2"):
             try:
                 shutil.rmtree("temp2")
-                print("Cleaned up temp2 folder")
+                print("cleaned up temp2 folder")
             except Exception as cleanup_err:
                 print(f"Failed to remove temp2 folder: {cleanup_err}")
 
