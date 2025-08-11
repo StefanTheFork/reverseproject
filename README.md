@@ -1,26 +1,20 @@
-# Welcome to the reverse project.
-<img width="1357" height="769" alt="image" src="https://github.com/user-attachments/assets/d6da0318-f5a1-4184-9cfa-7178e828ab18" />
+### Welcome to the reverse project.
+<img width="623" height="474" alt="image" src="https://github.com/user-attachments/assets/adedef8c-a208-4778-b29b-fd6fba3fdfac" />
 
+This is my stupid passion project that ive been working on since 2023 *WOW*
+current "release" of reverse is reborn
+this reborn thing goes from a fully fledged cpp program to a do it yourself thingy in python
+everything is a giant work in progress, if there are any bugs feel free to open an issue or pull request.
 
-Reverse has been my main passionproject since early 2023 (wow.) 
-this is a little operating system thingy inside your terminal!
-with reverse reborn, i released a simple package manager called SPM (stupid package manager)
-current "release" of reverse is reborn. it makes everything in seperate files, adds new features and is on python unlike reverse7, which was on c++
+# New stuff.
 
-base v1 has been released!
-it renames pretty much everything, has native spm support and a new fallback ascii logo
-<img width="1357" height="769" alt="image" src="https://github.com/user-attachments/assets/368cd2d1-5c3f-4c4b-8f33-dd0550cdb2f7" />
+sewer v1 has been released!
 
-ALSOOOOOOOOOO THE NEW SPM REWRITE IS HERE....... but not really(?)
-theres a "menu" for installing packages... but not really.
-<img width="1357" height="769" alt="image" src="https://github.com/user-attachments/assets/b1865607-ca08-4840-b59e-558c48fd2dc4" />
+sewer is the new package manager for reverse. its alot better than spm but you do need spm to install sewer.
+<img width="623" height="474" alt="image" src="https://github.com/user-attachments/assets/097e7288-6731-4faf-8353-ff0ca7765b86" />
+sewer uses the same packagelist thingy that spm does, so you can install your normal spm packages tru sewer.
+SPM WILL NOT BE UPDATED PAST THIS POINT. ALL UPDATES WILL BE DONE TO SEWER.
 
-theres also a WORKING menu for updating spm and the core... so thats cooler
-<img width="1357" height="769" alt="image" src="https://github.com/user-attachments/assets/dd163150-7df2-4593-916f-95219b0ff956" />
+coming up: actual base v1 that isnt just renaming some stuff.
 
-now, the reason why this isnt actually a full rewrite but rather a sloppily trhrown togheder feature half made by repurposed chatgpt slop and half reading what old spm was....... 
-is because the spm full rewrite will be a whole different package manager. yes reverse will have 2 package managers. no, spm will not be updated past this point.
-kthxbai
-
-
-aug 3rd 3:24 am 
+aug 11th 8:12 am 
