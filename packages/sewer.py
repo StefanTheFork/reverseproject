@@ -1,4 +1,4 @@
-#sewer v1
+# sewer v1
 import os
 import shutil
 
@@ -31,24 +31,27 @@ def sewerdo(args):
                     print("sorry but it wasnt installed. error:",e)
         
         elif args[0] == "-us":
-            os.makedirs("temp",)
-            os.makedirs("temp2",)
+            os.makedirs("temp", exist_ok=True)
+            os.makedirs("backups", exist_ok=True)
 
             print("Updating sewer... this will take a moment or two")
             print("Cloning reverseproject repository")
             os.system("git clone --depth 1 --single-branch --branch main https://github.com/StefanTheFork/reverseproject.git temp")
 
+            # Backup sewer.py from packages folder
             if os.path.exists("packages/sewer.py"):
-                shutil.move("packages/sewer.py", os.path.join("temp2", "sewer_backup.py"))
-                print("Backed up sewer")
+                shutil.move("packages/sewer.py", os.path.join("backups", "sewer_backup.py"))
+                print("Backed up packages/sewer.py")
             else:
-                print("Sewer not found in parent folder")
+                print("sewer.py not found in packages folder")
 
-            if os.path.exists(os.path.join("temp", "packages/sewer.py")):
-                shutil.move(os.path.join("temp", "packages/sewer.py"), "packages/sewer.py")
-                print("Moved new pkg to parent folder")
+            # Move new sewer.py from temp to packages folder
+            if os.path.exists(os.path.join("temp", "sewer.py")):
+                shutil.move(os.path.join("temp", "sewer.py"), "packages/sewer.py")
+                print("Moved new sewer.py to packages folder")
             else:
-                print("Updated sewer not found in temp folder")
+                print("Updated sewer.py not found in temp folder")
+
 
         elif args[0] == "-ub":
             os.makedirs("temp", exist_ok=True)
