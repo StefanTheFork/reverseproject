@@ -8,6 +8,8 @@ everything is a giant work in progress, if there are any bugs feel free to open 
 
 # New stuff.
 
+## there is now a devbuild base, install it using sewer -i base-devbuild
+
 sewer v1 has been released!
 
 sewer is the new package manager for reverse. its alot better than spm but you do need spm to install sewer.

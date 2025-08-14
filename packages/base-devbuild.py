@@ -7,8 +7,13 @@ import sewer
 import minifetch
 time = datetime.now()
 
+'''
+Hello! this is the devbuild.
+here youll find stuff like... NEVER SEEN BEFORE FEATURES, before i push them to the base.
+this is kinda like a rolling release but you gotta install it tru spm/sewer and to update it you have to reinstall it.
+everything here is meant for testing stuff like new features and stuff.
+'''
 
-# if your host os is unix, use clear, if windows use cls, if it cant find what you have it just prints 100 new lines
 if os.name == 'posix':
     clear = "clear"
 elif os.name == 'nt':
@@ -65,7 +70,7 @@ def readfile(filenames):
             print(f"cat: {file}: Error - {e}")
 
 def editfile(filename):
-    print(f"Editing {filename}. Type ':wq' or 'EOF' on a new line to save and exit.")
+    print(f"Editing {filename}. Type 'EOF' on a new line to save and exit.")
     lines = []
 
     try:
@@ -93,20 +98,18 @@ def editfile(filename):
     except Exception as e:
         print(f"Error editing file: {e}")
 
-# fallback shell
-
-def fallbackshell():
-    fallback = """
-   __      _ _ _                _    
-  / _|    | | | |              | |   
- | |_ __ _| | | |__   __ _  ___| | __
- |  _/ _` | | | '_ \ / _` |/ __| |/ /
- | || (_| | | | |_) | (_| | (__|   < 
- |_| \__,_|_|_|_.__/ \__,_|\___|_|\_\\
+def devshell():
+    ascii = """
+      _            ____        _ _     _ 
+     | |          |  _ \      (_) |   | |
+   __| | _____   _| |_) |_   _ _| | __| |
+  / _` |/ _ \ \ / /  _ <| | | | | |/ _` |
+ | (_| |  __/\ V /| |_) | |_| | | | (_| |
+  \__,_|\___| \_/ |____/ \__,_|_|_|\__,_|
 """
-    print(fallback)
+    print(ascii)
     print("hey, you havent set up a shell!")
-    print("fear not my child. for i have.... a fallback shell")
+    print("")
 
     while True:
         command = input("~> ").strip()
