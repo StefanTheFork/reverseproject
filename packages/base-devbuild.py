@@ -99,7 +99,7 @@ def editfile(filename):
         print(f"Error editing file: {e}")
 
 def devshell():
-    ascii = """
+    asciilogo = """
       _            ____        _ _     _ 
      | |          |  _ \      (_) |   | |
    __| | _____   _| |_) |_   _ _| | __| |
@@ -107,12 +107,10 @@ def devshell():
  | (_| |  __/\ V /| |_) | |_| | | | (_| |
   \__,_|\___| \_/ |____/ \__,_|_|_|\__,_|
 """
-    print(ascii)
-    print("hey, you havent set up a shell!")
-    print("")
+    print(asciilogo)
 
     while True:
-        command = input("~> ").strip()
+        command = input("-> ").strip()
         if not command:
             continue 
 
@@ -170,10 +168,6 @@ def devshell():
 
         elif func_name == "sewer":
             sewer.sewerdo(args)
-            #if len(args) < 2:
-            #    print("Usage: sewer <-i package;-us;-ub>")
-            #else:
-            #    sewer.sewerdo(args)
 
         elif func_name == "minifetch":
             minifetch.sysfetch()
