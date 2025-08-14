@@ -4,6 +4,7 @@ from datetime import datetime
 import spm
 import sewer
 import minifetch
+import funnifetch
 time = datetime.now()
 
 '''
@@ -170,6 +171,9 @@ def devshell():
 
         elif func_name == "minifetch":
             minifetch.sysfetch()
+
+        elif func_name == "funnifetch":
+            funnifetch.fetch()
 
 
 
