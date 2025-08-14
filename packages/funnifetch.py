@@ -6,7 +6,7 @@ from rich.panel import Panel
 
 # funnifetch v1, make it yours...
 
-def funnifetch():
+def sysfetch():
     console = Console()
     # tribute to OG reverse. using all the official colours of it. red green blue and yelwo
     logo = """
