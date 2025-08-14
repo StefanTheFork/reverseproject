@@ -61,7 +61,7 @@ def readfile(filenames):
             print(f"cat: {file}: Error - {e}")
 
 def editfile(filename):
-    print(f"Editing {filename}. Type ':wq' or 'EOF' on a new line to save and exit.")
+    print(f"Editing {filename}. Type 'EOF' on a new line to save and exit.")
     lines = []
 
     try:
