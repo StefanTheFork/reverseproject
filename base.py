@@ -5,8 +5,6 @@ from datetime import datetime
 import spm
 time = datetime.now()
 
-
-# if your host os is unix, use clear, if windows use cls, if it cant find what you have it just prints 100 new lines
 if os.name == 'posix':
     clear = "clear"
 elif os.name == 'nt':
