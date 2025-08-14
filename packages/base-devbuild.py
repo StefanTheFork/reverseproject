@@ -173,7 +173,7 @@ def devshell():
             minifetch.sysfetch()
 
         elif func_name == "funnifetch":
-            funnifetch.fetch()
+            funnifetch.sysfetch()
 
 
 
