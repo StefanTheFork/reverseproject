@@ -1,4 +1,4 @@
-# base v1, changes: renamed a shitload of stuff, fallback shell now has ascii art and uh native spm support wowza
+# base v0.9, changes: renamed a shitload of stuff, fallback shell now has ascii art and uh native spm support wowza
 import os
 import shutil
 from datetime import datetime
