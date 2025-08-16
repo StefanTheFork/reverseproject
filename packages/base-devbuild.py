@@ -134,14 +134,14 @@ def load_config(config_file="dev_config.txt"):
                 if line.startswith('import ') or line.startswith('from '):
                     try:
                         exec(line, main_globals)
-                        #print(f"Imported: {line}")
+                        print(f"Imported: {line}")
                     except Exception as e:
                         print(f"Import error: {line} - {e}")
                 # Handle commands
                 elif ' - ' in line:
                     cmd, func_call = line.split(' - ', 1)
                     commands[cmd.strip()] = func_call.strip()
-                    #print(f"Added command: {cmd.strip()} -> {func_call.strip()}")
+                    print(f"Added command: {cmd.strip()} -> {func_call.strip()}")
         
         print(f"Loaded {len(commands)} commands from config")
         
