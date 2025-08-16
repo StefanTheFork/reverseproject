@@ -29,7 +29,7 @@ oh i almost forogt. SCREENSHOTS.
 
 heres a screenshot of the new devbuild loading the config.
 <img width="989" height="582" alt="image" src="https://github.com/user-attachments/assets/83dcaec1-893e-42cf-b464-7792dd668b3c" />
-heres proof that it actually works,
+heres proof that it actually works, OH BTW I FIXED MINIFETCH WOOHOOOOOOOO
 <img width="769" height="738" alt="image" src="https://github.com/user-attachments/assets/77a7c8d8-eb71-497a-965c-511fe89188c6" />
 
 
