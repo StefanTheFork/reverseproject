@@ -163,7 +163,6 @@ import spm
 import sewer
 import minifetch
 import funnifetch
-import editor
 
 
 # cant go nowehere without mah clock and clear :broken heart:
