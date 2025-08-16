@@ -1,19 +1,23 @@
 ### Welcome to the reverse project.
 <img width="623" height="474" alt="image" src="https://github.com/user-attachments/assets/adedef8c-a208-4778-b29b-fd6fba3fdfac" />
+_**est.**_ 2023 🔥
+# whats this reverse project all about?
+this is my little stupid passion project........
 
-This is my stupid passion project that ive been working on since 2023 *WOW*
+its a simulation of an os because i wanted to piss of my teacher one day.
+its a pointless thing really, but i enjoy working on it!
 
-current "release" of reverse is reborn
 
-this reborn thing goes from a fully fledged cpp program to a do it yourself thingy in python
 
-everything is a giant work in progress, if there are any bugs feel free to open an issue or pull request.
 
 # New stuff.
+## there is now a devbuild base
 
-## there is now a devbuild base, install it using sewer -i base-devbuild
-## you can also install it tru spm, but i reccomend using sewer.
-## to install sewer run spm install and type sewer
+you can also install it tru spm, but i reccomend using sewer.
+
+install it using ```sewer -i base-devbuild```
+
+to install sewer run ```spm install``` and type ```sewer```
 
 
 Base devbuild v1 quaso. 
