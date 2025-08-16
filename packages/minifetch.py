@@ -12,19 +12,54 @@ console = Console()
 
 def get_cpu_name():
     try:
-        output = subprocess.check_output(["wmic", "cpu", "get", "Name"], universal_newlines=True)
-        lines = [line.strip() for line in output.split("\n") if line.strip()]
-        return lines[1] if len(lines) > 1 else platform.processor()
+        if platform.system() == "Windows":
+            output = subprocess.check_output(["wmic", "cpu", "get", "Name"], universal_newlines=True)
+            lines = [line.strip() for line in output.split("\n") if line.strip()]
+            return lines[1] if len(lines) > 1 else platform.processor()
+        elif platform.system() == "Linux":
+            with open('/proc/cpuinfo', 'r') as f:
+                for line in f:
+                    if 'model name' in line:
+                        return line.split(':')[1].strip()
+        elif platform.system() == "Darwin":  # macOS
+            output = subprocess.check_output(["sysctl", "-n", "machdep.cpu.brand_string"], universal_newlines=True)
+            return output.strip()
     except Exception:
-        return platform.processor()
+        pass
+    return platform.processor() or "Unknown CPU"
     
 def get_gpu_name():
     try:
-        output = subprocess.check_output(["wmic", "path", "win32_VideoController", "get", "name"], universal_newlines=True)
-        lines = [line.strip() for line in output.split("\n") if line.strip()]
-        return lines[1] if len(lines) > 1 else "Unknown GPU"
+        if platform.system() == "Windows":
+            output = subprocess.check_output(["wmic", "path", "win32_VideoController", "get", "name"], universal_newlines=True)
+            lines = [line.strip() for line in output.split("\n") if line.strip()]
+            return lines[1] if len(lines) > 1 else "Unknown GPU"
+        elif platform.system() == "Linux":
+            # Try lspci first
+            try:
+                output = subprocess.check_output(["lspci"], universal_newlines=True)
+                for line in output.split('\n'):
+                    if 'VGA compatible controller' in line or 'Display controller' in line:
+                        return line.split(': ', 1)[1] if ': ' in line else line
+            except:
+                pass
+            # Try nvidia-smi as fallback
+            try:
+                output = subprocess.check_output(["nvidia-smi", "--query-gpu=name", "--format=csv,noheader,nounits"], universal_newlines=True)
+                return output.strip()
+            except:
+                pass
+        elif platform.system() == "Darwin":  # macOS
+            try:
+                output = subprocess.check_output(["system_profiler", "SPDisplaysDataType"], universal_newlines=True)
+                for line in output.split('\n'):
+                    if 'Chipset Model:' in line:
+                        return line.split(':')[1].strip()
+            except:
+                pass
     except Exception:
-        return "Unknown GPU"
+        pass
+    return "Unknown GPU"
 
 user_os = platform.system()
 user_os_version = platform.version()
@@ -39,7 +74,7 @@ try:
     width = user_monitor.width
     height = user_monitor.height
 except Exception:
-    width, height = 0, 0
+    width, height = "Unknown", "Unknown"
 
 user_minifetch_specs = f"""
 [#52FFBA]host OS:[/#52FFBA] {user_os}
@@ -50,7 +85,7 @@ user_minifetch_specs = f"""
 [#52FFBA]host Display height:[/#52FFBA] {height}
 """
 
-logo = """
+logo = r"""
 [#A378C2]      
   __  __ _      _  
  |  \/  (_)_ _ (_)
@@ -71,4 +106,5 @@ def sysfetch():
     console.print(Columns([logo_frame, specs_frame]))
 
 # Run the function
-sysfetch()
+if __name__ == "__main__":
+    sysfetch()
