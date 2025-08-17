@@ -1,4 +1,4 @@
-### Welcome to the reverse project.
+# Welcome to the reverse project.
 <img width="623" height="474" alt="image" src="https://github.com/user-attachments/assets/adedef8c-a208-4778-b29b-fd6fba3fdfac" />
 
 _**est.**_ 2023 🔥
@@ -8,12 +8,13 @@ this is my little stupid passion project........
 its a simulation of an os because i wanted to piss of my teacher one day.
 its a pointless thing really, but i enjoy working on it!
 
-# base v1 devbuild 2
-New stuff/info
+## New stuff/info
+base v1 devbuild 2
+
 <img width="1056" height="212" alt="image" src="https://github.com/user-attachments/assets/45f1681a-1547-4bd5-95db-db1035872979" />
 To use your old dev_config.txt just rename it to config.rvrs and it SHOULD work.
 
-
+## new packages
 Cowsay ```sewer -i cowsay```
 
 <img width="317" height="223" alt="image" src="https://github.com/user-attachments/assets/b9c7f94e-d3e4-4cb0-80a9-fada47c4e0be" />
@@ -31,7 +32,7 @@ Fortune ```sewer -i fortune```
 
 
 
-# what is sewer?
+## what is sewer?
 
 sewer is the new package manager for reverse. its alot better than spm but you do need spm to install sewer.
 <img width="623" height="474" alt="image" src="https://github.com/user-attachments/assets/097e7288-6731-4faf-8353-ff0ca7765b86" />
@@ -40,7 +41,7 @@ sewer uses the same package folder that spm uses, so you can install anything tr
 
 SPM WILL NOT BE UPDATED PAST THIS POINT. ALL UPDATES WILL BE DONE TO SEWER.
 
-coming in the next few devbuilds (ls mv and rename will be coming to base v1, there wont be a devbuild 3 for v1)
+## coming in the next few devbuilds (ls mv and rename will be coming to base v1, there wont be a devbuild 3 for v1)
 envy - gnu nano like editor
 ls - list current folder
 mv - move file from somewhere to somewhere 
