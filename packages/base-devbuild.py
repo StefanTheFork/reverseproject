@@ -1,41 +1,25 @@
 import os
 import shutil
 from datetime import datetime
+import sys
 
 time = datetime.now()
 
 '''
-Welcome to the devbuild of v1 quaso
-v1 quaso implements ACTUAL config files (TAKE THAT CARROT CAKE!)
-the good thing about these config files is that you can edit them LIVE
-unlike the base, where you have to exit it, open an ide to edit like 3 lines and then repeat.
-the config files contain everything youll need to run 3rd party functions, like and exec imports system
-aswell as a exec commands system.
+Welcome to reverse v1 devbuild 2
+v1 implements ACTUAL config files (TAKE THAT CARROT CAKE!)
 
-
-this will be the last BIG feature update (for now, atleast)
-i am going to be focusing on packages like 
-envy (a vim/gnu nano style text editor)
-cowsay reverse port
-fortune reverse port
-
-new features that ARENT going to be new packages are:
-uninstalling packages using spm and sewer. (this is a feature that you geniunely might need, thats why im adding it to spm)
-logo in config file. 
-the reason why im not adding them rn is because its 5:44am and i am in need of sleep.
+most important features on devbuild 2:
+2 new packages have been released, cowsay and fortune.
+reload-debug -> reloads the config and outputs the imports and functions.
+the config went from "dev_config.txt" to "config.rvrs" so you can use the same config while in both the devbuild and stable
+(its funny that the v1 stable hasnt been released yet)
+the default config no longer includes EVERY application from the packages
 '''
 
-
-if os.name == 'posix':
-    clear = "clear"
-elif os.name == 'nt':
-    clear = "cls"
-else:
-    print('\n' * 100)
-
-# BASE commands
-def clear_screen():
-    os.system(clear)
+def clear():
+    sys.stdout.write("\033[2J\033[H")
+    sys.stdout.flush()
 
 def clock():
     current_time = time.strftime("%H:%M:%S")
@@ -113,7 +97,7 @@ def editfile(filename):
 # Config system
 commands = {}
 
-def load_config(config_file="dev_config.txt"):
+def load_config(config_file="config.rvrs"):
     global commands
     commands = {}
     try:
@@ -134,14 +118,12 @@ def load_config(config_file="dev_config.txt"):
                 if line.startswith('import ') or line.startswith('from '):
                     try:
                         exec(line, main_globals)
-                        print(f"Imported: {line}")
                     except Exception as e:
                         print(f"Import error: {line} - {e}")
                 # Handle commands
                 elif ' - ' in line:
                     cmd, func_call = line.split(' - ', 1)
                     commands[cmd.strip()] = func_call.strip()
-                    print(f"Added command: {cmd.strip()} -> {func_call.strip()}")
         
         print(f"Loaded {len(commands)} commands from config")
         
@@ -151,9 +133,21 @@ def load_config(config_file="dev_config.txt"):
     except Exception as e:
         print(f"Error loading config: {e}")
 
-def create_default_config(config_file="dev_config.txt"):
-    default_config = """# DevBuild Configuration File
-# Format: command - function_call()
+def reload_config_debug(config_file="config.rvrs"): # this is a separate function because i couldnt figure out how to actaulyl make it work properly.
+    load_config()
+    with open(config_file, 'r') as f:
+        lines = f.readlines()
+    for line in lines:
+        line = line.strip()
+        if line and not line.startswith('#'):
+            if line.startswith('import'):
+                print(line)
+            elif ' - ' in line:
+                print(line)
+
+def create_default_config(config_file="config.rvrs"):
+    default_config = """# Reverse Configuration File
+# Format: alias - function()
 
 # Imports
 import os
@@ -161,15 +155,8 @@ import shutil
 from datetime import datetime
 import spm
 import sewer
-import minifetch
-import funnifetch
 
-
-# cant go nowehere without mah clock and clear :broken heart:
-clear - clear_screen()
-clock - clock()
-
-# File operations
+# file stuff.
 mkfile - mkfile()
 mkdir - mkdir()
 rmfile - rmfile()
@@ -177,14 +164,13 @@ rmdir - rmdir()
 cat - readfile()
 edit - editfile()
 
-# SPM and sewer handling
+# spm stuff
 spm-install - spm.install()
 spm-update - spm.update_package()
 sewer - sewer.sewerdo()
 
-# Sysfetch stuff
-minifetch - minifetch.sysfetch()
-funnifetch - funnifetch.fetch()
+# other stuff
+reload-debug - reload_config_debug()
 
 """
     
@@ -192,7 +178,7 @@ funnifetch - funnifetch.fetch()
         with open(config_file, 'w') as f:
             f.write(default_config)
         print(f"Created default config file: {config_file}")
-        load_config(config_file)  # Reload after creating
+        load_config(config_file)  #load after creating
     except Exception as e:
         print(f"Error creating config file: {e}")
 
@@ -253,12 +239,12 @@ def execute_command(func_call, args):
 
 def devshell():
     asciilogo = """
-    DEVBUILD OF v1 quaso
+     use help to get help(?)
  _ __ _____   _____ _ __ ___  ___  
 | '__/ _ \ \ / / _ \ '__/ __|/ _ \  
 | | |  __/\ V /  __/ |  \__ \  __/_ 
 |_|  \___| \_/ \___|_|  |___/\___(_)
-     use help to get help(?)
+      reverse v1 devbuild 2
 """
     print(asciilogo)
     
@@ -276,16 +262,21 @@ def devshell():
 
         if func_name == "reload":
             reload_config()
+        elif func_name == "clear":
+            clear()
+        elif func_name == "clock":
+            clock()
         elif func_name == "help":
             print("Available commands:")
             for cmd in commands:
                 print(f"  {cmd}")
             print("  reload - reload config")
-            print("  help - show this help")
+            print("  reload -debug - reloads config and shows the commands and imports.")
+            print("  help - show this thingy")
         elif func_name in commands:
             execute_command(commands[func_name], args)
         else:
             print(f"Unknown command: {func_name}")
 
-clear_screen()
+clear()
 devshell()
