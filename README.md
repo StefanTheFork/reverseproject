@@ -8,29 +8,20 @@ this is my little stupid passion project........
 its a simulation of an os because i wanted to piss of my teacher one day.
 its a pointless thing really, but i enjoy working on it!
 
+# base v1 devbuild 2
+New stuff/info
+<img width="1056" height="212" alt="image" src="https://github.com/user-attachments/assets/45f1681a-1547-4bd5-95db-db1035872979" />
+To use your old dev_config.txt just rename it to config.rvrs and it SHOULD work.
 
 
+Cowsay ```sewer -i cowsay```
 
-# New stuff.
-## there is now a devbuild base
+<img width="317" height="223" alt="image" src="https://github.com/user-attachments/assets/b9c7f94e-d3e4-4cb0-80a9-fada47c4e0be" />
 
-you can also install it tru spm, but i reccomend using sewer.
+Fortune ```sewer -i fortune```
 
-install it using ```sewer -i base-devbuild```
+<img width="683" height="221" alt="image" src="https://github.com/user-attachments/assets/b114a1da-cfbf-4dee-8cb9-d885243e8566" />
 
-to install sewer run ```spm install``` and type ```sewer```
-
-
-Base devbuild v1 quaso. 
-
-heres the changelkog:
-<img width="1132" height="379" alt="image" src="https://github.com/user-attachments/assets/9743d513-2518-49e1-b017-51436ea9c58c"/>
-oh i almost forogt. SCREENSHOTS. 
-
-heres a screenshot of the new devbuild loading the config.
-<img width="989" height="582" alt="image" src="https://github.com/user-attachments/assets/83dcaec1-893e-42cf-b464-7792dd668b3c" />
-heres proof that it actually works, OH BTW I FIXED MINIFETCH WOOHOOOOOOOO
-<img width="769" height="738" alt="image" src="https://github.com/user-attachments/assets/77a7c8d8-eb71-497a-965c-511fe89188c6" />
 
 
 sewer v1 has been released!
@@ -41,6 +32,6 @@ sewer uses the same packagelist thingy that spm does, so you can install your no
 
 SPM WILL NOT BE UPDATED PAST THIS POINT. ALL UPDATES WILL BE DONE TO SEWER.
 
-coming up: devbuild bugfixes and config features :)
+coming up: ```sewer -ru <pkg>``` and ```config clean``` that removes residual stuff from deleted apps. + ```reload/reload-debug``` rename to ```config reload/config reload-debug```
 
-aug 16th 5:50 am 
+Aug 17th 8:20 PM 2025 
