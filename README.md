@@ -41,16 +41,26 @@ sewer uses the same package folder that spm uses, so you can install anything tr
 
 SPM WILL NOT BE UPDATED PAST THIS POINT. ALL UPDATES WILL BE DONE TO SEWER.
 
-## coming in the next few devbuilds (ls mv and rename will be coming to base v1, there wont be a devbuild 3 for v1)
+## coming in the next few devbuilds
+
 envy - gnu nano like editor
+
 ls - list current folder
+
 mv - move file from somewhere to somewhere 
+
 rename - rename file/folder/anything
+
 quickedit - use it to quickly add an entry to your config *I AM NOT COMPLETELY SURE ON WETHER I WANT TO ADD THIS OR NOT.*
+
 dyanmic-prompt - installable trough sewer
+
 dymamic-prompt-colorized - installable trough sewer, does not need default dynamic prompt
+
 ```sewer -ls``` - lists currently avalible packages
+
 ```sewer -d <pkg>``` - deletes selected package
+
 ```config clean``` - removes residual commands from config *I AM NOT COMPLETELY SURE ON WETHER I WANT TO ADD THIS OR NOT.*
 
 Aug 17th 8:20 PM 2025 
