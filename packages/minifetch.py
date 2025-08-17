@@ -108,6 +108,3 @@ def sysfetch():
     specs_frame = Panel.fit(user_minifetch_specs, border_style="#52FFBA")
     console.print(Columns([logo_frame, specs_frame]))
 
-# Run the function
-if __name__ == "__main__":
-    sysfetch()
