@@ -29,10 +29,20 @@ sewer v1 has been released!
 sewer is the new package manager for reverse. its alot better than spm but you do need spm to install sewer.
 <img width="623" height="474" alt="image" src="https://github.com/user-attachments/assets/097e7288-6731-4faf-8353-ff0ca7765b86" />
 
-sewer uses the same packagelist thingy that spm does, so you can install your normal spm packages tru sewer.
+sewer uses the same package folder that spm uses, so you can install anything tru spm and sewer
 
 SPM WILL NOT BE UPDATED PAST THIS POINT. ALL UPDATES WILL BE DONE TO SEWER.
 
-coming up: ```sewer -ru <pkg>``` and ```config clean``` that removes residual stuff from deleted apps. + ```reload/reload-debug``` rename to ```config reload/config reload-debug```
+coming in the next few devbuilds (ls mv and rename will be coming to base v1, there wont be a devbuild 3 for v1)
+envy - gnu nano like editor
+ls - list current folder
+mv - move file from somewhere to somewhere 
+rename - rename file/folder/anything
+quickedit - use it to quickly add an entry to your config *I AM NOT COMPLETELY SURE ON WETHER I WANT TO ADD THIS OR NOT.*
+dyanmic-prompt - installable trough sewer
+dymamic-prompt-colorized - installable trough sewer, does not need default dynamic prompt
+```sewer -ls``` - lists currently avalible packages
+```sewer -d <pkg>``` - deletes selected package
+```config clean``` - removes residual commands from config *I AM NOT COMPLETELY SURE ON WETHER I WANT TO ADD THIS OR NOT.*
 
 Aug 17th 8:20 PM 2025 
