@@ -12,8 +12,7 @@ def say(args=None):
     print(' ' + '_' * (length + 2))
     print(f'< {message} >')
     print(' ' + '-' * (length + 2))
-    if args[1] is None:
-     print(r'''
+    print(r'''
         \   ^__^
          \  (oo)\_______
             (__)\       )\/\
